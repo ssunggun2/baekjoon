@@ -6,8 +6,13 @@ def d(n):
     num = n + thousand + hundred + ten + one
     return num
 
+iList = []
+dList = []
 for i in range(10000):
+    iList.append(i)
     if 10000 > d(i):
-        print(d(i))
+        dList.append(d(i))
 
-
+a_sub_b = [x for x in iList if x not in dList]
+for k in a_sub_b:
+    print(k)
